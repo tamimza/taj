@@ -3,10 +3,10 @@ const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
 require("dotenv").config();
 
 const dynamoDBClient = new DynamoDBClient({
-  region: "eu-north-1",
+  region: process.env.AWS_REGION,
   credentials: {
-    accessKeyId: "wKOWqS/CevoGHGv+korU4hSz19D3nwh7L4cvSoMv",
-    secretAccessKey: "AKIAW3MD7MGL7YJSJ3GB",
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   },
 });
 
